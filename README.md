@@ -1,0 +1,1 @@
+This is a very simple website that I created using HTML, CSS, and a bit of JavaScript. I plan to improve it eventually, but I wanted to put it here for now so the profile isn't too empty. Stay tuned for updates!!
