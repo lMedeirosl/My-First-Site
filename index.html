@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café Aurora</title>
+    <meta
+      name="description"
+      content="Café Aurora - Cafés especiais, torra artesanal e ambiente acolhedor."
+    />
+    <title>Café Aurora | Cafés Especiais</title>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -15,59 +21,276 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="reveal">
-      <div class="hero">
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#inicio" class="logo">Café Aurora</a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#menu">Cardápio</a></li>
+          <li><a href="#contato">Visite-nos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="inicio">
+      <div class="hero reveal">
+        <span class="hero-subtitle">Torra Artesanal desde 2018</span>
         <h1>Café Aurora</h1>
-        <p>Onde cada xícara conta uma história</p>
-        <a href="#menu">Ver Cardápio</a>
+        <p>Onde cada xícara conta uma história de sabor, origem e dedicação.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Ver Cardápio</a>
+          <a href="#sobre" class="btn btn-outline">Nossa História</a>
+        </div>
       </div>
     </header>
 
-    <section class="about-section reveal">
-      <h2 class="section-title">Sobre Nós</h2>
-      <p class="about-text">
-        O Café Aurora nasceu da paixão por cafés especiais e ambientes
-        acolhedores. Trabalhamos com grãos selecionados e torra artesanal para
-        entregar uma experiência única.
-      </p>
-    </section>
-
-    <section id="menu" class="reveal">
-      <h2 class="section-title">Cardápio</h2>
-
-      <div class="menu">
-        <div class="menu-item reveal">
-          <h3>Espresso</h3>
-          <p>Café intenso e encorpado</p>
-          <span>R$ 6,00</span>
+    <main>
+      <section id="sobre" class="about-section">
+        <div class="container about-grid">
+          <div class="about-content reveal">
+            <span class="section-tag">Nossa Essência</span>
+            <h2 class="section-title">Paixão pelo grão perfeito</h2>
+            <p class="about-text">
+              O Café Aurora nasceu da paixão por cafés especiais e ambientes
+              acolhedores. Trabalhamos diretamente com pequenos produtores para
+              garantir grãos 100% Arábica de alta pontuação, com torra fresca
+              realizada semanalmente em nossa própria cafeteria.
+            </p>
+            <p class="about-text">
+              Cada método de extração é preparado com precisão por nossos
+              baristas para destacar as notas sensoriais naturais de cada safra.
+            </p>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <strong class="stat-number">100%</strong>
+              <span class="stat-label">Grãos Arábica</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">86+</strong>
+              <span class="stat-label">Pontuação SCA</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">12</strong>
+              <span class="stat-label">Métodos e Bebidas</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">8 Anos</strong>
+              <span class="stat-label">De Tradição</span>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="menu-item reveal">
-          <h3>Cappuccino</h3>
-          <p>Espresso, leite vaporizado e espuma</p>
-          <span>R$ 10,00</span>
+      <section id="diferenciais" class="features-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Experiência</span>
+            <h2 class="section-title">O que nos torna únicos</h2>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card reveal">
+              <h3>Origem Sustentável</h3>
+              <p>
+                Comércio direto e justo com fazendas certificadas do Sul de
+                Minas e Cerrado Mineiro.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <h3>Torra Semanal</h3>
+              <p>
+                Lotes pequenos torrados toda semana para preservar os óleos
+                essenciais e o aroma fresco.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <h3>Confeitaria Autoral</h3>
+              <p>
+                Pães de fermentação natural e doces produzidos diariamente em
+                nossa cozinha.
+              </p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="menu-item reveal">
-          <h3>Latte</h3>
-          <p>Suave e cremoso</p>
-          <span>R$ 9,00</span>
+      <section id="menu" class="menu-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Seleção da Casa</span>
+            <h2 class="section-title">Nosso Cardápio</h2>
+          </div>
+
+          <div class="menu-filters reveal" role="tablist" aria-label="Categorias do cardápio">
+            <button class="filter-btn active" data-category="todos" role="tab" aria-selected="true">
+              Todos
+            </button>
+            <button class="filter-btn" data-category="classicos" role="tab" aria-selected="false">
+              Clássicos
+            </button>
+            <button class="filter-btn" data-category="especiais" role="tab" aria-selected="false">
+              Especiais & Filtrados
+            </button>
+            <button class="filter-btn" data-category="acompanhamentos" role="tab" aria-selected="false">
+              Para Acompanhar
+            </button>
+          </div>
+
+          <div class="menu" id="menu-grid">
+            <article class="menu-item reveal" data-category="classicos">
+              <div class="menu-item-header">
+                <h3>Espresso Duplo</h3>
+                <span class="price">R$ 8,00</span>
+              </div>
+              <p>Café intenso e encorpado com crema aveludada e notas de cacau.</p>
+              <span class="badge">Clássico</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="classicos">
+              <div class="menu-item-header">
+                <h3>Cappuccino Italiano</h3>
+                <span class="price">R$ 12,00</span>
+              </div>
+              <p>Proporção equilibrada de espresso, leite vaporizado e crema densa.</p>
+              <span class="badge">Clássico</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="classicos">
+              <div class="menu-item-header">
+                <h3>Latte</h3>
+                <span class="price">R$ 11,00</span>
+              </div>
+              <p>Bebida suave e cremosa à base de espresso com leite texturizado.</p>
+              <span class="badge">Clássico</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="classicos">
+              <div class="menu-item-header">
+                <h3>Mocha Artesanal</h3>
+                <span class="price">R$ 14,00</span>
+              </div>
+              <p>Espresso combinado com ganache de chocolate meio amargo 70% e leite.</p>
+              <span class="badge">Clássico</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="especiais">
+              <div class="menu-item-header">
+                <h3>Filtrado Hario V60</h3>
+                <span class="price">R$ 15,00</span>
+              </div>
+              <p>Extração limpa que ressalta a acidez cítrica e a doçura do grão do mês.</p>
+              <span class="badge">Especial</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="especiais">
+              <div class="menu-item-header">
+                <h3>Cold Brew Tonica</h3>
+                <span class="price">R$ 17,00</span>
+              </div>
+              <p>Café extraído a frio por 18 horas, água tônica e fatia de laranja Bahia.</p>
+              <span class="badge">Especial</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="acompanhamentos">
+              <div class="menu-item-header">
+                <h3>Croissant de Manteiga</h3>
+                <span class="price">R$ 13,00</span>
+              </div>
+              <p>Massa folhada francesa de fermentação lenta, crocante por fora e macia por dentro.</p>
+              <span class="badge">Padaria</span>
+            </article>
+
+            <article class="menu-item reveal" data-category="acompanhamentos">
+              <div class="menu-item-header">
+                <h3>Pão de Queijo da Canastra</h3>
+                <span class="price">R$ 9,00</span>
+              </div>
+              <p>Porção assada na hora feita com queijo meia cura autêntico da Serra da Canastra.</p>
+              <span class="badge">Padaria</span>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="menu-item reveal">
-          <h3>Mocha</h3>
-          <p>Café com chocolate</p>
-          <span>R$ 11,00</span>
+      <section id="contato" class="contact-section">
+        <div class="container contact-grid">
+          <div class="contact-info reveal">
+            <span class="section-tag">Visite-nos</span>
+            <h2 class="section-title">Esperamos por você</h2>
+            <p class="contact-desc">
+              Venha tomar um café conosco, trabalhar em um ambiente tranquilo com
+              Wi-Fi de alta velocidade ou levar nossos grãos para casa.
+            </p>
+
+            <div class="info-list">
+              <div class="info-block">
+                <h4>Endereço</h4>
+                <p>Rua das Acácias, 420 - Vila Mariana, São Paulo - SP</p>
+              </div>
+              <div class="info-block">
+                <h4>Horário de Funcionamento</h4>
+                <p>Terça a Sexta: 08h às 20h</p>
+                <p>Sábados, Domingos e Feriados: 09h às 19h</p>
+              </div>
+              <div class="info-block">
+                <h4>Contato</h4>
+                <p>contato@cafeaurora.com.br | (11) 3456-7890</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="newsletter-box reveal">
+            <h3>Clube do Grão Aurora</h3>
+            <p>
+              Cadastre seu e-mail para receber novidades sobre novas safras,
+              workshops de barismo e convites para degustações.
+            </p>
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+              <div class="form-group">
+                <label for="email-input" class="sr-only">Seu melhor e-mail</label>
+                <input
+                  type="email"
+                  id="email-input"
+                  placeholder="Digite seu melhor e-mail"
+                  required
+                />
+                <button type="submit" class="btn btn-primary">Inscrever-se</button>
+              </div>
+              <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span class="logo">Café Aurora</span>
+          <p>Qualidade e tradição em cada xícara.</p>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 Café Aurora. Todos os direitos reservados.</p>
         </div>
       </div>
-    </section>
-
-    <footer class="reveal">
-      <p>© 2026 Café Aurora • Todos os direitos reservados</p>
     </footer>
 
     <!-- JS -->
     <script src="script.js"></script>
   </body>
 </html>
-
